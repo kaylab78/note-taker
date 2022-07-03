@@ -9,14 +9,7 @@ const app = express();
 // middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
-// app.get('/notes', (req, res) => {
-//     res.sendFile(path.join(__dirname, "../public/notes.html"));
-// });
-
-// app.get('*', (req, res) => {
-//     res.sendFile(path.join(__dirname, "../public/index.html"))
-// });
+app.use(express.static('public'));
 
 function filterByQuery(query, notesArray) {
     let filteredResults = notesArray;
@@ -85,6 +78,14 @@ app.post('/api/notes', (req, res) => {
         res.json(note);
     }
 })
+
+app.get('/notes', (req, res) => {
+    res.sendFile(path.join(__dirname, "./public/notes.html"));
+});
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, "./public/index.html"))
+});
 
 app.listen(PORT, () => {
     console.log(`API server now on port ${PORT}!`);
