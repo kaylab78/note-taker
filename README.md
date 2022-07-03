@@ -16,6 +16,7 @@
 
 ## Technologies
 - [Express.js](https://www.npmjs.com/package/express)
+- [Herkou](https://note-taker-202207.herokuapp.com/api/notes)
 - [Jest.js](https://www.npmjs.com/package/jest)
 - [Node.js](https://nodejs.org/en/)
 
