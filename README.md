@@ -27,3 +27,4 @@ This project is licensed under the MIT license.
 [License: MIT License](https://opensource.org/licenses/MIT)
 
 ## Credits
+Starter code cloned from [https://github.com/coding-boot-camp/miniature-eureka](https://github.com/coding-boot-camp/miniature-eureka).
