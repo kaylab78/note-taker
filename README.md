@@ -4,7 +4,7 @@
 ## Description
 This is a simple note taking application. The user is able to write a title and text description for the note and save it. 
 
-To view the deployed application, [click here](https://kaylab78.github.io/note-taker/). To view the application on Heroku [click here](https://note-taker-202207.herokuapp.com/).
+To view the deployed application, [click here](https://note-taker-20220704.herokuapp.com/).
 
 ## Table of Contents
 - [Installation](#installation)
@@ -31,6 +31,9 @@ When the user clicks on the "Get Started" button, they are taken to a page where
 
 In order to create a new note, the user types a title and a description in the appropriate boxes. The user clicks the save icon in the upper right corner to save the note. 
 ![On the note taking screen, the user types "Write README.md" in the title box. The user types, "Include description, screenshot and link to deployed application," in the text box below the title. The user clicks a save icon in the upper right corner.](./public/assets/images/screenshot-3.gif)
+
+If the user wants to delete a note, they simply click on the red trash can next to that note.
+![The mouse clicks the red trash can which is next to a previously created note in the left column.](./public/assets/images/screenshot-4.gif)
 
 ## Technologies
 - [Express.js](https://www.npmjs.com/package/express)
