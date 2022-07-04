@@ -4,16 +4,6 @@
       "title": "Write README.md",
       "text": "Include description, screenshot and link to deployed application.",
       "id": "0"
-    },
-    {
-      "title": "New Note",
-      "text": "New Note Test",
-      "id": "1"
-    },
-    {
-      "title": "Another note",
-      "text": "Note text",
-      "id": "2"
     }
   ]
 }

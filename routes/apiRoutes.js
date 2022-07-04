@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const { notes } = require("../data/db.json");
-const { createNewNote, validateNote } = require("../lib/notes");
+const { createNewNote, validateNote, deleteNote } = require("../lib/notes");
 
 // Read the db.json file and return all saved notes as JSON
 router.get('/notes', (req, res) => {
@@ -28,6 +28,12 @@ router.post('/notes', (req, res) => {
         const note = createNewNote(req.body, notes);
         res.json(note);
     }
+});
+
+router.delete('/notes/:id', (req,res) => {
+    const params = req.params.id;
+    deleteNote(params, notes);
+    res.redirect('');
 })
 
 module.exports = router;
