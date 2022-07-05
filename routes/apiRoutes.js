@@ -2,20 +2,12 @@ const router = require("express").Router();
 const { notes } = require("../data/db.json");
 const { createNewNote, validateNote, deleteNote } = require("../lib/notes");
 
-// Read the db.json file and return all saved notes as JSON
+// reads the db.json file and return all saved notes as JSON
 router.get('/notes', (req, res) => {
     let results = notes;
     res.json(results);
 });
 
-// app.get('/api/notes/:id', (req, res) => {
-//     const result = findById(req.params.id, notes);
-//     if (result) {
-//         res.json(result);
-//     } else {
-//         res.send(404);
-//     }
-// });
 
 router.post('/notes', (req, res) => {
     // set id based on what the next index of the array will be
@@ -25,11 +17,13 @@ router.post('/notes', (req, res) => {
     if (!validateNote(req.body)) {
         res.status(400).send('Your note is not properly formatted.');
     } else {
+        // saves new note to the request body. returns new note to client.
         const note = createNewNote(req.body, notes);
         res.json(note);
     }
 });
 
+// receives query parameter with id of note to delete. removes note and rewrites notes to db.json file.
 router.delete('/notes/:id', (req,res) => {
     const params = req.params.id;
     deleteNote(params, notes);
