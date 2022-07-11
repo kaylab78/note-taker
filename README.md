@@ -48,3 +48,5 @@ This project is licensed under the MIT license.
 
 ## Credits
 Starter code cloned from [https://github.com/coding-boot-camp/miniature-eureka](https://github.com/coding-boot-camp/miniature-eureka).
+
+I worked with Meg Meyers, boot camp tutor, on the DELETE request, refactoring the code, and more.
